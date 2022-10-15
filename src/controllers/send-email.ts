@@ -26,8 +26,6 @@ class SendEmailController {
 
   async send (req: TypedRequestBody<IBody>, res: Response): Promise<Response> {
 
-    console.log(req.body)
-
     let body: IBody
     try {
 
@@ -74,8 +72,6 @@ class SendEmailController {
       )
 
     } catch (error) {
-      console.log(error)
-
       return res.status(400).json(
         {
           success: false,
